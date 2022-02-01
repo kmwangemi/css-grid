@@ -1,0 +1,76 @@
+body {
+	margin: 0;
+}
+
+.container {
+	border: 2px solid black;
+   height: 800px;
+	display: grid; /* inline-grid and grid--> block */
+	/* grid-template-columns: repeat(3, minmax(200px, 1fr));  /* 200px 200px 200px, repeat(3, 200px), 1fr 2fr 1fr */
+   /* grid-template-rows: repeat(3, 1fr);  100px 150px 200px, repeat(3, 200px), 1fr 2fr 1fr, repeat(3, minmax(200px, 1fr)) */ 
+   grid-template: repeat(3, 200px) / repeat(3, 200px);  /* grid-template-rows/grid-template-columns combined */
+   /* column-gap: 20px;
+   row-gap: 20px; */
+   /* gap: 20px;  row-gap/column-gap combined --> gap: 20px 30px */
+   /* justify-items: center;  align items along row axis by default-stretch - start, end, center, stretch */
+   /* align-items: center;  align items along column axis by default-stretch - start, end, center, stretch */
+   /* place-items: start end;  align-items / justify-items combined, place-items: center */
+   /* justify-content: center; moving the whole grid container along row axis - start, end, center, space-between, space-around, space-evenly */
+   /* align-content: center; moving the whole grid container along column axis - start, end, center, space-between, space-around, space-evenly */
+   /* place-content: start end;  align-content / justify-content combined, place-content: center */
+   /* grid-auto-flow: column;  controls how auto-placed items get inserted into the grid, values-row, column, dense, column dense */
+   /* grid-auto-columns: 100px;  sets default width of columns */
+   /* grid-auto-rows: 100px;  sets default height of rows */
+}
+
+.grid-item {
+	color: white;
+	font-size: 1.5rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+.item-1 {
+	background-color: #b4bf35;
+   /* grid-column-start: 1; */
+   /* grid-column-end: span 2;  starting column to ending column - 3, span 2 */
+   /* grid-row-start: 1; */
+   /* grid-row-end: 3;  starting row to ending row - 3, span 2 */
+   grid-column: 1 / span 2;  /* short hand--> grid-column-start / grid-column-end  */
+   grid-row: 1 / span 2;  /* short hand ---> grid-row-start / grid-row-end */
+}
+
+.item-2 {
+	background-color: #b95f21;
+   /* justify-self: center;  values ---> default- stretch, start, end, center --> along row axis */
+   /* align-self: center;  values ---> default- stretch, start, end, center --> along column axis */
+   place-self: center;  /* align-self / justify-self combined, place-self: start end;  */
+}
+
+.item-3 {
+	background-color: #1c4c56;
+}
+
+.item-4 {
+	background-color: #cfb276;
+}
+
+.item-5 {
+	background-color: #6b0803;
+}
+
+.item-6 {
+	background-color: #cfb276;
+}
+
+.item-7 {
+	background-color: #b95f21;
+}
+
+.item-8 {
+	background-color: #01243a;
+}
+
+.item-9 {
+	background-color: #aad041;
+}
